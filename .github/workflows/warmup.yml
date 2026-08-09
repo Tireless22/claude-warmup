@@ -2,7 +2,10 @@ name: Claude Code Warmup
 
 on:
   schedule:
-    - cron: '0 4 * * 1-5'
+    # CET (winter, UTC+1): late Oct–late Mar → 6am local = 5:07 UTC
+    - cron: '7 5 1-3,10-12 * *'
+    # CEST (summer, UTC+2): late Mar–late Oct → 6am local = 4:07 UTC
+    - cron: '7 4 4-9 * *'
   workflow_dispatch: {}
 
 concurrency:
